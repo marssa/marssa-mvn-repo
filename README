@@ -1,0 +1,6 @@
+This is a temporary repository for Maven artifacts. Until we have the first MARSSA release there will only be a snapshot version.
+
+When we have the first release we will consider uploading to a real Maven repository server like nexus.sonatype.org and/or maven.org
+
+In the meantime this solution using github is being used as described in the following article
+http://cemerick.com/2010/08/24/hosting-maven-repos-on-github/
