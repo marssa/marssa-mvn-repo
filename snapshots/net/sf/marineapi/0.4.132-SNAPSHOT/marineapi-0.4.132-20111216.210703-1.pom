@@ -1,0 +1,62 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>net.sf</groupId>
+	<artifactId>marineapi</artifactId>
+	<version>0.4.132-SNAPSHOT</version>
+	<packaging>jar</packaging>
+
+	<name>Java Marine API</name>
+	<url>http://marineapi.sourceforge.net/</url>
+	<description>Java Marine API is an NMEA 0183 library for Java 1.5 and newer. The goal of the project is to enable easy access to data provided by electronic marine instruments such as GPS, sonar or autopilot. Detects and reads NMEA sentences from any input stream, e.g. from file, serial port, tcp/ip socket etc. Interfaces and parsers for selected sentences are provided and you can also integrate your own parsers by extending the base parser. See project web or files section for more info, javadocs and examples.</description>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+
+	<organization>
+		<name>Kimmo Tuukkanen</name>
+		<url>http://ktuukkan.users.sourceforge.net/</url>
+	</organization>
+
+	<scm>
+		<url>https://marineapi.svn.sourceforge.net/svnroot/marineapi </url>
+		<connection>https</connection>
+		<developerConnection>Kimmo Tuukkanen</developerConnection>
+		<tag>trunk</tag>
+	</scm>
+
+	<!-- This stub section is only needed in older versions of Maven -->
+	<distributionManagement>
+		<repository>
+			<id>repo</id>
+			<url>https://raw.github.com/marssa/marssa-mvn-repo/master/releases</url>
+		</repository>
+		<snapshotRepository>
+			<id>snapshot-repo</id>
+			<url>https://raw.github.com/marssa/marssa-mvn-repo/master/snapshots</url>
+		</snapshotRepository>
+	</distributionManagement>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.rxtx</groupId>
+			<artifactId>rxtx</artifactId>
+			<version>2.1.7</version>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-deploy-plugin</artifactId>
+				<version>2.5</version>
+				<configuration>
+					<altDeploymentRepository>footprint::default::file:../../git/marssa-mvn-repo/snapshots</altDeploymentRepository>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>
